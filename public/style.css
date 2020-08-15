@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@400;500;700;800&display=swap');
+
+:root {
+    --primeira-cor: rgb(22, 21, 21);
+    --segunda-cor: #f9f9f9;
+    --terceira-cor: white;
+    --quarta-cor: #fd951f 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    border: none;
+}
+
+html, body {
+    min-height: 100vh;
+}
+
+body {
+    font-family: 'Baloo Tamma 2', serif;
+    background-color: var(--segunda-cor);
+}
+
+/* === HEADER === */
+header {
+    background-color: var(--primeira-cor);
+    color: white;
+    width: 100%;
+    padding: 32px 0;
+    text-align: center;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 15px;
+}
+
+/* === LOGO === */
+.logo {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo h1 {
+    color: var(--terceira-cor);
+    font-size: 32px;
+    line-height: 10px;
+}
+
+.logo h2 {
+    color: var(--quarta-cor);
+    font-size: 16px;
+}
+
+/* === HEADER SEARCH === */
+.search input {
+    width: 100%;
+    padding: 8px 16px;
+    border-radius: 2px;
+    font-size: 16px;
+
+}
