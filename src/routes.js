@@ -1,6 +1,6 @@
 const express = require('express')
 const routes = express.Router()
-const productController = require('./app/controllers/productController')
+const productController = require('./app/controllers/ProductController')
 
 routes.get('/', (req, res) => {
     return res.render('layout.njk')
@@ -9,7 +9,7 @@ routes.get('/', (req, res) => {
 routes.get('/products/create', productController.create)
 
 routes.get('/ads/create', (req, res) => {
-    return res.render('/products/create')
+    return res.redirect('/products/create')
 })
 
 module.exports = routes
