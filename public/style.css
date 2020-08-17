@@ -4,7 +4,8 @@
     --primeira-cor: rgb(22, 21, 21);
     --segunda-cor: #f9f9f9;
     --terceira-cor: white;
-    --quarta-cor: #fd951f 
+    --quarta-cor: #fd951f; 
+    --quinta-cor: ##777; 
 }
 
 /*#region GLOBAL*/
@@ -37,6 +38,7 @@ body {
     align-items: center;
     align-content: space-between;
     flex-wrap: wrap;
+    gap: 12px;
 }
 /*#endregion GLOBAL*/
 
@@ -99,6 +101,7 @@ nav.primary ul {
     justify-content: space-evenly;
 }
 
+
 nav.primary ul li a {
     display: flex;
     align-items: center;
@@ -106,6 +109,7 @@ nav.primary ul li a {
     transition: 300ms;
     padding: 10px 20px;
     border-radius: 30px;
+    min-width: 165px;
 }
 
 nav.primary ul li a:hover {
@@ -122,10 +126,10 @@ section form {
     background-color: var(--terceira-cor);
     padding: 32px 24px;
     margin: 32px auto;
-    box-shadow: 2px 2px 2px -4px rgba(60, 60, 60, 0.9);
-    border: 1px solid #efefef;
+    box-shadow: 2px 2px 2px -1px rgba(60, 60, 60, 0.9);
+    border: 1px solid #b9b9b9;
     border-radius: 4px;
-    min-width: 700px;
+    max-width: 700px;
     width: 90%;
 }
 
@@ -138,6 +142,70 @@ section form .header h3 {
     color: var(--quarta-cor);
 }
 
+form .item {
+    margin-bottom: 16px;
+}
+
+form .item > div:nth-child(1) {
+    color: var(--quinta-cor);
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+form .item input[type="text"],
+form .item input[type="number"],
+form .item textarea,
+form .item select {
+    width: 100%;
+    padding: 8px 20px;
+    box-shadow: 2px 2px 2px 0px rgba(60, 60, 60, 0.9);
+    outline: none;
+    border: 2px solid var(--quarta-cor);
+    border-radius: 16px;
+}
+
+form .item select {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: var(--terceira-cor);
+    background-image: url(seta.svg);
+    background-repeat: no-repeat;
+    background-position: right .7em top 50%, 0;
+    background-size: .65em;
+}
+
+form .item textarea {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.button {
+    background-color: var(--quarta-cor);
+    color: var(--terceira-cor);
+    width: 100%;
+    padding: 9px;
+    border-radius: 20px;
+    display: block;
+    font-weight: bold;
+    font-size: 16px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center;
+    align-self: end;
+    cursor: pointer;
+    transition: all 0.2s;
+    border: 2px solid var(--quarta-cor);
+}
+
+.button:hover {
+    background-color: var(--terceira-cor);
+    border: 2px solid var(--quarta-cor);
+    color: var(--quarta-cor);
+}
 /*#endregion FORM PRODUCTS*/
 
 
