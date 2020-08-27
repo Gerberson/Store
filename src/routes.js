@@ -7,7 +7,9 @@ routes.get('/', (req, res) => {
 })
 
 routes.get('/products/create', productController.create)
+routes.post('/products', productController.post)
 
+//Alias
 routes.get('/ads/create', (req, res) => {
     return res.redirect('/products/create')
 })
