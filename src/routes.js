@@ -8,6 +8,8 @@ routes.get('/', (req, res) => {
 
 routes.get('/products/create', productController.create)
 routes.post('/products', productController.post)
+routes.put('/products', productController.put)
+routes.delete('/products', productController.delete)
 routes.get('/products/:id/edit', productController.edit)
 
 //Alias

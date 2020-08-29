@@ -5,7 +5,8 @@
     --segunda-cor: #f9f9f9;
     --terceira-cor: white;
     --quarta-cor: #fd951f; 
-    --quinta-cor: ##777; 
+    --quinta-cor: #777; 
+    --sexta-cor: #1e2a78;
 }
 
 /*#region GLOBAL*/
@@ -122,7 +123,7 @@ nav.primary ul li a i {
 /*#endregion HEADER SEARCH */
 
 /*#region FORM PRODUCTS*/
-section form {
+section .form {
     background-color: var(--terceira-cor);
     padding: 32px 24px;
     margin: 32px auto;
@@ -199,12 +200,24 @@ form .item textarea {
     cursor: pointer;
     transition: all 0.2s;
     border: 2px solid var(--quarta-cor);
+    margin-bottom: 15px;
+}
+
+.button.edit {
+    background-color: var(--sexta-cor);
+    border: 2px solid var(--sexta-cor);
 }
 
 .button:hover {
     background-color: var(--terceira-cor);
     border: 2px solid var(--quarta-cor);
     color: var(--quarta-cor);
+}
+
+.button.edit:hover {
+    background-color: var(--terceira-cor);
+    border: 2px solid var(--sexta-cor);
+    color: var(--sexta-cor);
 }
 
 

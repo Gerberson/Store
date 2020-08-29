@@ -1,3 +1,4 @@
+const { formatPrice, removeFormatPrice } = require('../../lib/utils')
 const validate = require('../validations/validate')
 const Category = require('../models/Category')
 const Product = require('../models/Product')
@@ -34,9 +35,35 @@ module.exports = {
 
         if(!product) return res.send('Produto não encontrado')
 
+        product.old_price = formatPrice(product.old_price)
+        product.price = formatPrice(product.price)
+
         results = await Category.all()
         const categories = results.rows
 
-        return res.send('products/edit.njk', { product, categories })
+        return res.render('products/edit.njk', { product, categories })
+    },
+    async put(req, res) {
+        const validar = validate.allProperties(req.body, 'Todos os campos deve estar preenchidos!')
+        
+        if (validar.isValid)
+            return res.send(validar.message)
+
+
+        req.body.price = removeFormatPrice(req.body.price)
+
+        if (req.body.old_price !=req.body.price) {
+            const oldProduct = await Product.find(req.body.id)
+            req.body.old_price = oldProduct.rows[0].price
+        }
+
+        await Product.update(req.body) 
+
+        return res.redirect(`products/${req.body.id}/edit`)
+    },
+    async delete(req, res) {
+        await Product.delete(req.body.id)
+
+        return res.redirect('/products/create')
     }
 }
