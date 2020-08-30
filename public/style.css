@@ -232,17 +232,18 @@ form .item #photos-upload {
     position: relative;
     display: block;
     overflow: hidden;
-    height: 30px;
-    width: 100%;
+    max-width: 180px;
+
 }
 
 form .item #photos-upload p {
-    padding-top: 3px;
+    padding: 3px 10px 0 10px;
     border-radius: 16px;
     background-color: var(--sexta-cor);
     color: var(--segunda-cor);
     text-align: center;
-    width: 180px;
+    max-width: 180px;
+
 }
 
 form .item #photos-input {
@@ -258,5 +259,18 @@ form .item #photos-input {
     opacity: 0;
 }
 
+form .item #photos-preview {
+    margin: 5px 0;
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+}
 
+form .item #photos-preview img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 3px solid var(--segunda-cor);
+    box-shadow: 4px 2px 7px 1px  rgb(95, 92, 92);
+}
 /*#endregion PHOTOS UPLOADO*/
