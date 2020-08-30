@@ -28,6 +28,10 @@ body {
     background-color: var(--segunda-cor);
 }
 
+input {
+    font-family: 'Baloo Tamma 2', serif;
+}
+
 .container {
     max-width: 940px;
     margin: 15px auto;
@@ -223,4 +227,36 @@ form .item textarea {
 
 /*#endregion FORM PRODUCTS*/
 
+/*#region PHOTOS UPLOADO*/
+form .item #photos-upload {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    height: 30px;
+    width: 100%;
+}
 
+form .item #photos-upload p {
+    padding-top: 3px;
+    border-radius: 16px;
+    background-color: var(--sexta-cor);
+    color: var(--segunda-cor);
+    text-align: center;
+    width: 180px;
+}
+
+form .item #photos-input {
+    position: absolute;
+    top: 3px;
+    left: 0;
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    text-align: center;
+    opacity: 0;
+}
+
+
+/*#endregion PHOTOS UPLOADO*/
