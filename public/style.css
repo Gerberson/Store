@@ -272,5 +272,8 @@ form .item #photos-preview img {
     border-radius: 50%;
     border: 3px solid var(--segunda-cor);
     box-shadow: 4px 2px 7px 1px  rgb(95, 92, 92);
+    position: relative;
 }
+
+
 /*#endregion PHOTOS UPLOADO*/

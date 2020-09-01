@@ -15,7 +15,7 @@ const Mask = {
 }
 
 const PhotosUpload = {
-    preview: querySelector('#photos-preview'),
+    preview: document.querySelector('#photos-preview'),
     uploadLimit: 6,
     handleFileInput(event) {
         const { files: fileList } = event.target
@@ -58,4 +58,5 @@ const PhotosUpload = {
 
         return false
     }
+
 }
