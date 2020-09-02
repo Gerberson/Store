@@ -41,8 +41,9 @@ const PhotosUpload = {
         const div = document.createElement('div')
         div.classList.add('photos')
 
-        div.onclick = () => alert('Remover')
+        div.onclick = PhotosUpload.removePhoto
         div.appendChild(image)
+        div.appendChild(PhotosUpload.getRemoveButton())
 
         return div
     },
@@ -57,6 +58,18 @@ const PhotosUpload = {
         }
 
         return false
-    }
+    },
+    getRemoveButton() {
+        const button = document.createElement('i')
+        button.classList.add('material-icons')
+        button.innerHTML = "close"
+        return button
+    },
+    removePhoto(event) {
+        const photoDiv = event.target.parentNode
+        const photosArray = Array.from(PhotosUpload.preview.children)
+        const index = photosArray.indexOf(photoDiv)
 
+        photoDiv.remove(index);
+    }
 }

@@ -264,6 +264,7 @@ form .item #photos-preview {
     display: flex;
     gap: 5px;
     flex-wrap: wrap;
+    position: relative;
 }
 
 form .item #photos-preview img {
@@ -273,7 +274,35 @@ form .item #photos-preview img {
     border: 3px solid var(--segunda-cor);
     box-shadow: 4px 2px 7px 1px  rgb(95, 92, 92);
     position: relative;
+    background-color: #1e2a78;
 }
 
+form .item #photos-preview img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 3px solid var(--segunda-cor);
+    box-shadow: 4px 2px 7px 1px  rgb(95, 92, 92);
+    position: relative;
+    background-color: #1e2a78;
+}
 
+form .item #photos-preview .photos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 400ms;
+}
+
+form .item #photos-preview .photos i {
+    color: red;
+    position: absolute;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 400ms;
+}
+
+form .item #photos-preview .photos:hover i {
+    opacity: 1;
+}
 /*#endregion PHOTOS UPLOADO*/
