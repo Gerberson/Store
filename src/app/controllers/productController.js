@@ -12,6 +12,7 @@ module.exports = {
             return res.render('products/create.njk', { categories })
         })
         .catch((err) => {
+            res.send(err)
             throw new Error(err)
         })
     },
