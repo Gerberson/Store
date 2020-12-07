@@ -86,6 +86,7 @@ header {
     padding: 8px 16px;
     border-radius: 30px;
     font-size: 16px;
+    outline: none;
 }
 
 nav {
@@ -228,22 +229,18 @@ form .item textarea {
 /*#endregion FORM PRODUCTS*/
 
 /*#region PHOTOS UPLOADO*/
-form .item #photos-upload {
-    position: relative;
-    display: block;
-    overflow: hidden;
-    max-width: 180px;
-
+form .item #photos-upload input {
+    display: none;
 }
 
-form .item #photos-upload p {
+form .item #photos-upload label {
     padding: 3px 10px 0 10px;
     border-radius: 16px;
     background-color: var(--sexta-cor);
     color: var(--segunda-cor);
     text-align: center;
     max-width: 180px;
-
+    cursor: pointer;
 }
 
 form .item #photos-input {
