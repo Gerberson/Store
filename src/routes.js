@@ -19,4 +19,5 @@ routes.get('/ads/create', (req, res) => {
     return res.redirect('/products/create')
 })
 
+
 module.exports = routes
